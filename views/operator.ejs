@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        * {
+            font-family: 'Satoshi', sans-serif !important;
+            letter-spacing: -0.02em; 
+        }
+        a{
+            text-decoration: none;
+        }
+        .button-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            min-width: 10em;
+            padding: 0.3em;
+            margin-bottom: 1em;
+            background-color: white;
+            border:2px solid black;
+            border-radius: 1em;
+            font-size: 1.3em;
+        }
+        button:hover{
+            background-color: rgba(128, 128, 128, 0.16);
+        }
+        .label1, .input1 {
+            min-width: 10em;
+            padding: 0.3em;
+            margin-bottom: 1em;
+            background-color: white;
+            font-size: 1.3em;
+            border-radius: 0.3em;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+        .addr {
+            margin-left: 4em;
+        }
+        .cn {
+            margin-left: 0.4em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button-container">
+    <h2>ELECTRICITY BILL OPERATING SYSTEM</h2>
+    <form action="/operatorSuccess" method="post">
+        <label class="label1" for="username">Customer name</label>
+        <input class="input1 cn" type="text" name="username" placeholder="Name">
+        <br>
+        <label class="label1" for="accno">Account Number</label>
+        <input class="input1" type="number" name="accno" placeholder="Account number">
+        <br>
+        <label class="label1" for="address">Address</label>
+        <input class="input1 addr" type="text" name="address" placeholder="Address">
+        <br>
+        <label class="label1" for="units">Number of Units</label>
+        <input class="input1 cn" type="number" name="units" placeholder="Units">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+
+</html>
